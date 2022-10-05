@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Main Css -->
+        <link rel="stylesheet" href="assets/css/main.css" />
+
+        <!-- Bootstrap Css -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+            crossorigin="anonymous"
+        />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font Awesome -->
+        <script
+            src="https://kit.fontawesome.com/c581680c1a.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Title -->
+        <title>Guess Number</title>
+    </head>
+    <body>
+        <div id="js-sideMenu" class="side__menu">
+            <div class="row side__menu--header">
+                <div class="col-12">
+                    <h5>Choose a Theme</h5>
+                </div>
+            </div>
+            <div class="container themes-menu">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-5 themes">
+                        <div class="row themes__item">
+                            <div
+                                class="col themes__item--col themes__item--light"
+                            >
+                                <p class="">?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 themes">
+                        <div class="row themes__item">
+                            <div
+                                class="col themes__item--col themes__item--dark"
+                            >
+                                <p class="">?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 themes">
+                        <div class="row themes__item">
+                            <div
+                                class="col themes__item--col themes__item--brown"
+                            >
+                                <p class="">?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 themes">
+                        <div class="row themes__item">
+                            <div
+                                class="col themes__item--col themes__item--green"
+                            >
+                                <p class="">?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 themes">
+                        <div class="row themes__item">
+                            <div
+                                class="col themes__item--col themes__item--purple"
+                            >
+                                <p class="">?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 themes">
+                        <div class="row themes__item">
+                            <div
+                                class="col themes__item--col themes__item--blue"
+                            >
+                                <p class="">?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="row themes-menu__right-side d-flex align-items-center"
+                >
+                    <div class="col">
+                        <button
+                            onclick="closeMenu()"
+                            class="btn themes-menu__right-side--close-btn"
+                        >
+                            x
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Wrapper -->
+        <div class="wrapper">
+            <!-- Title -->
+            <div class="container header">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 id="js-header__title" class="header__title">
+                            Guess a Number!
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <!-- Sub-title -->
+            <div class="container instruction">
+                <div class="row">
+                    <div class="col">
+                        <h5
+                            id="js-instruction__title"
+                            class="instruction__title"
+                        ></h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Secret Number -->
+            <div class="container secret-number">
+                <div class="row secret-number__row">
+                    <div class="col-12 secret-number__col">
+                        <span
+                            id="js-secret-number"
+                            class="secret-number__col--number"
+                        >
+                            ?
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Message -->
+            <div class="container message">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 id="js-message" class="message__title"></h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Check -->
+            <div class="container check">
+                <div class="row">
+                    <div class="col-6 check__result">
+                        <p class="check__result--score"><span>?</span></p>
+                        <p class="check__result--high-score">HighScore : 18</p>
+                        <button class="btn check__result--again-btn">
+                            AGAIN
+                        </button>
+                    </div>
+                    <div class="col-6 check__input">
+                        <input type="number" class="check__input--number" />
+                        <button class="btn check__input--number-btn">
+                            CHECK
+                        </button>
+                    </div>
+                    <div class="col-12">
+                        <span class="side__menu--open" onclick="openMenu()">
+                            <i class="fa fa-bars btn"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap Scripts -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"
+        ></script>
+        <!-- My Scripts -->
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/styles.js"></script>
+        <script src="assets/js/theme-script.js"></script>
+    </body>
+</html>
+
+<!-- Display
+  <div class="container check ">
+    <div class="row">
+        <div class="col-6 check__result">
+            <p class="check__result--score"><span>?</span></p>
+            <p class="check__result--high-score">
+                HighScore : 18
+            </p>
+            <button class="btn check__result--again-btn">
+                AGAIN
+            </button>
+        </div>
+        <div class="col-6 check__input">
+            <input
+                type="number"
+                class="check__input--number"
+            />
+            <button class="btn check__input--number-btn">
+                CHECK
+            </button>
+        </div>
+        <div class="col-12">
+            <span class="side__menu--open" onclick="openMenu()">
+                <i class="fa fa-bars btn"></i>
+            </span>
+        </div>
+    </div>
+</div>
+</div> -->

@@ -1,0 +1,11 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.to-high {
+    box-shadow: 4px 6px 0px 0px #7fb414, 0px 0px 0px 0px #000000;
+}
+
+.to-low {
+    box-shadow: inset 4px 4px 4px 0px #000000, inset 0px 0px 0px 0px #000000;
+}

@@ -1,0 +1,48 @@
+// ===================================================================
+// ! ==================== ! Themes Colours ===========================
+// ===================================================================
+
+// ------------- LIGHT THEME  -------------
+
+html[data-theme='light'] {
+    --theme__color: #{$theme__light};
+    --theme__color--text: #{$theme__light--text};
+    --theme__color--border: #{$theme__light--border};
+    --theme__color--input: #{$theme__light--input};
+    --theme-color-light--btn: #{$theme__light--btn};
+}
+
+html[data-theme='dark'] {
+    --theme__color: #{$theme__dark};
+    --theme__color--text: #{$theme__dark--text};
+    --theme__color--border: #{$theme__dark--border};
+    --theme__color--input: #{$theme__dark--input};
+}
+
+html[data-theme='brown'] {
+    --theme__color: #{$theme__brown};
+    --theme__color--text: #{$theme__brown--text};
+    --theme__color--border: #{$theme__brown--border};
+    --theme__color--input: #{$theme__brown--input};
+}
+
+html[data-theme='green'] {
+    --theme__color: #{$theme__green};
+    --theme__color--text: #{$theme__green--text};
+    --theme__color--border: #{$theme__green--border};
+    --theme__color--input: #{$theme__green--input};
+}
+
+html[data-theme='purple'] {
+    --theme__color: #{$theme__purple};
+    --theme__color--text: #{$theme__purple--text};
+    --theme__color--border: #{$theme__purple--border};
+    --theme__color--input: #{$theme__purple--input};
+}
+
+html[data-theme='blue'] {
+    --theme__color: #{$theme__blue};
+    --theme__color--text: #{$theme__blue--text};
+    --theme__color--border: #{$theme__blue--border};
+    --theme__color--input: #{$theme__blue--input};
+}

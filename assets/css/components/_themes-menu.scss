@@ -1,0 +1,109 @@
+// ===================================================================
+// ! ====================== ! Themes Menu ============================
+// ===================================================================
+// Side menu themes menu container
+.themes-menu {
+    height: calc(100% - 60px);
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: center;
+
+    &__right-side {
+        width: 3.4rem;
+
+        &--close-btn {
+            right: 0px;
+            position: absolute;
+            top: 40%;
+            margin-top: 0;
+            height: 6rem;
+            border-radius: 50px 0 0 50px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin-top: 0;
+            height: 6rem;
+            border-radius: 50px 0 0 50px !important;
+            background-color: var(--theme__color) !important;
+            color: var(--theme__color--input) !important;
+        }
+    }
+}
+
+// To make space between items
+.themes {
+    padding: 1rem;
+
+    &__item {
+        margin-left: 0 !important;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+
+        &--col {
+            @include position__to--center;
+            height: 100%;
+
+            p {
+                margin-bottom: 0;
+                font-size: 2rem;
+                // color: black;
+            }
+        }
+
+        &--light {
+            @include card-style($theme__light, $theme__light--text);
+            @include drop-shadow($theme__light--input);
+
+            &:hover {
+                @include hover($theme__light--text, $theme__light);
+            }
+        }
+
+        &--dark {
+            @include card-style($theme__dark, $theme__dark--text);
+            @include drop-shadow($theme__dark--input);
+
+            &:hover {
+                @include hover($theme__dark--input, $theme__dark);
+            }
+        }
+
+        &--brown {
+            @include card-style($theme__brown, $theme__brown--text);
+            @include drop-shadow($theme__brown--input);
+
+            &:hover {
+                @include hover($theme__brown--input, $theme__brown);
+            }
+        }
+
+        &--green {
+            @include card-style($theme__green, $theme__green--text);
+            @include drop-shadow($theme__green--input);
+
+            &:hover {
+                @include hover($theme__green--input, $theme__green);
+            }
+        }
+
+        &--purple {
+            @include card-style($theme__purple, $theme__purple--text);
+            @include drop-shadow($theme__purple--input);
+
+            &:hover {
+                @include hover($theme__purple--input, $theme__purple);
+            }
+        }
+
+        &--blue {
+            @include card-style($theme__blue, $theme__blue--text);
+            @include drop-shadow($theme__blue--input);
+
+            &:hover {
+                @include hover($theme__blue--input, $theme__blue);
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+    'small': 320px,
+    'medium': 768px,
+    'large': 1024px,
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'https://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+
+// ===================================================================
+// ! ====================== ! Main Styles ============================
+// ===================================================================
+
+//  Main Font
+$main-font: 'Stalinist One', cursive, 'Helvetica', 'Arial', sans-serif !default;
+
+// Border radius
+$border__radius: 15px;
+
+// Theme Colours
+$theme__light: #d9d9d9;
+$theme__light--text: #222222;
+$theme__light--border: #3b3b3b;
+$theme__light--input: #222222;
+$theme__light--btn: #222222;
+
+$theme__dark: #303030;
+$theme__dark--text: #e5f9bd;
+$theme__dark--border: #a0e418;
+$theme__dark--input: #7fb414;
+
+$theme__brown: #55423d;
+$theme__brown--text: #fffffe;
+$theme__brown--border: #271c19;
+$theme__brown--input: #ffc0ad;
+
+$theme__green: #004643;
+$theme__green--text: #befffc;
+$theme__green--border: #abd1c6;
+$theme__green--input: #f9bc60;
+
+$theme__purple: #6246ea;
+$theme__purple--text: #fffffe;
+$theme__purple--border: #2b2c34;
+$theme__purple--input: #d1d1e9;
+
+$theme__blue: #001534;
+$theme__blue--text: #b7c9e4;
+$theme__blue--border: #b7c9e4;
+$theme__blue--input: #ff5470;
