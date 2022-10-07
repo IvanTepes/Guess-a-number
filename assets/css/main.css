@@ -413,7 +413,7 @@ p {
 
 body {
   color: var(--theme__color--text);
-  font: normal 125%/1.4 "Stalinist One", cursive, "Helvetica", "Arial", sans-serif !important;
+  font: normal 125%/1.4 "Audiowide", cursive !important;
 }
 
 /**
@@ -545,7 +545,7 @@ body {
   background-color: var(--theme__color--input);
   box-shadow: inset rgb(0, 0, 0) 0px 0px 10px 0px;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0.2s;
   padding-top: 60px;
   text-align: center;
 }
@@ -575,7 +575,7 @@ body {
   color: var(--theme__color--text);
   text-shadow: 3px 3px 4px black;
   display: block;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .side__menu a:hover {
   color: var(--theme__color--input);
@@ -588,6 +588,11 @@ body {
   flex-wrap: nowrap;
   align-content: stretch;
   justify-content: center;
+}
+@media (min-width: 1200px) {
+  .themes-menu:first-child {
+    width: 50%;
+  }
 }
 .themes-menu__right-side {
   width: 3.4rem;
