@@ -111,4 +111,30 @@
     box-shadow: inset 3px 2px 5px 0 #000000, rgb(222 241 184 / 0%) 7px 3px 10px,
         rgb(0 0 0 / 16%) 3px 3px 3px 0px, rgb(127 180 20 / 0%) 4px 4px 0;
     color: $text-color !important;
-} ;
+}
+
+@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}
