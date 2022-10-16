@@ -63,3 +63,14 @@
     box-shadow: inset 3px 3px 3px 0 #000000, rgb(0 0 0 / 16%) 3px 3px 3px 0px,
         rgb(127 180 20 / 0%) 3px 3px 0 !important;
 }
+
+// To hide element // input number // if number correct
+.hidden {
+    visibility: hidden;
+}
+
+// To center absolute position element // again button // when score is 0 or number correct
+.center-absolute {
+    position: absolute;
+    left: 25%;
+}
