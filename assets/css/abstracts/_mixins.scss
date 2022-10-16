@@ -113,28 +113,49 @@
     color: $text-color !important;
 }
 
-@mixin for-phone-only {
-    @media (max-width: 599px) {
-        @content;
-    }
-}
-@mixin for-tablet-portrait-up {
-    @media (min-width: 600px) {
-        @content;
-    }
-}
-@mixin for-tablet-landscape-up {
-    @media (min-width: 900px) {
-        @content;
-    }
-}
-@mixin for-desktop-up {
-    @media (min-width: 1200px) {
-        @content;
-    }
-}
-@mixin for-big-desktop-up {
-    @media (min-width: 1800px) {
-        @content;
+// A map of breakpoints.
+$breakpoints: (
+    small-mobile: 321px,
+    medium-mobile: 376px,
+    large-mobile: 426px,
+    mobile: 768px,
+    laptop: 1240px,
+    desktop-lg: 1800px,
+);
+
+@mixin breakpoint($breakpoint, $direction) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Get the breakpoint value.
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        @if $direction == max {
+            @media (max-width: ($breakpoint-value - 1)) {
+                @content;
+            }
+        } @else if $direction == min {
+            @media (min-width: $breakpoint-value) {
+                @content;
+            }
+        } @else {
+            @media ($direction: $breakpoint-value) {
+                @content;
+            }
+        }
+
+        // If the breakpoint doesn't exist in the map.
+    } @else {
+        @if $direction == max {
+            @media (max-width: $breakpoint) {
+                @content;
+            }
+        } @else if $direction == min {
+            @media (min-width: $breakpoint) {
+                @content;
+            }
+        } @else {
+            @media ($direction: $breakpoint) {
+                @content;
+            }
+        }
     }
 }
