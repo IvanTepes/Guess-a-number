@@ -413,7 +413,7 @@ p {
 
 body {
   color: var(--theme__color--text);
-  font: normal 125%/1.4 "Audiowide", cursive !important;
+  font: normal 125%/1 "Audiowide", cursive !important;
 }
 
 /**
@@ -472,6 +472,15 @@ body {
   box-shadow: inset 3px 3px 3px 0 #000000, rgba(0, 0, 0, 0.16) 3px 3px 3px 0px, rgba(127, 180, 20, 0) 3px 3px 0 !important;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
+.center-absolute {
+  position: absolute;
+  left: 25%;
+}
+
 /* 
     Guess right section of screen
 */
@@ -504,7 +513,12 @@ body {
     ! Secret number 
 */
 .secret-number {
-  font-size: 5rem;
+  font-size: 8rem;
+}
+@media (max-width: 320px) {
+  .secret-number {
+    font-size: 5rem;
+  }
 }
 .secret-number__row {
   justify-content: center;
@@ -588,11 +602,6 @@ body {
   flex-wrap: nowrap;
   align-content: stretch;
   justify-content: center;
-}
-@media (min-width: 1200px) {
-  .themes-menu:first-child {
-    width: 50%;
-  }
 }
 .themes-menu__right-side {
   width: 3.4rem;
