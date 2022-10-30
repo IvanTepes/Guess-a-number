@@ -1,7 +1,17 @@
-// -----------------------------------------------------------------------------
-// This file contains all @font-face declarations, if any.
-// -----------------------------------------------------------------------------
+/*
+    ! =========== ! Fonts ===========
+*/
+
 body {
     color: var(--theme__color--text);
     font: normal 125% / 1 $main-font !important;
 }
+
+// Font size of paragraph
+p {
+    font-size: 0.8rem;
+}
+
+/*
+    ! =========== ! END ===========
+*/

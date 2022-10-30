@@ -1,12 +1,16 @@
-/* 
-    ! Main Display Layout
+/*
+    ! =========== ! Wrapper ===========
 */
 
 .wrapper {
-    height: 100vh;
+    // height: 100vh;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
     @include text-style;
 }
+
+/*
+    ! =========== ! END ===========
+*/

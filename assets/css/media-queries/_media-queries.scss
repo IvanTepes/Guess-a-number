@@ -1,0 +1,38 @@
+/*
+    ! =========== ! Media queries ===========
+*/
+
+/* Input number */
+.check__input--number {
+    @include breakpoint-device(mobile-small, max) {
+        width: 100%;
+    }
+    @include breakpoint-device(mobile-small, min) {
+        width: 95%;
+    }
+    @include breakpoint-device(mobile-medium, min) {
+        width: 90%;
+        padding-left: 4px;
+    }
+    @include breakpoint-device(mobile-large, min) {
+        width: 80%;
+    }
+    @include breakpoint-device(tablets, min) {
+        width: 45%;
+    }
+    @include breakpoint-device(laptop, min) {
+        width: 35%;
+    }
+    @include breakpoint-device(desktop-lg, min) {
+        width: 25%;
+        // padding-left: 20px;
+    }
+    @include breakpoint-device(desktop-xl, min) {
+        width: 25%;
+        padding-left: 20px;
+    }
+}
+
+/*
+    ! =========== ! END ===========
+*/

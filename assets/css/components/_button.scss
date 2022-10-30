@@ -1,6 +1,14 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
+/*
+    ! =========== ! Button ===========
+*/
+
+.btn:hover {
+    background-color: var(--theme__color--input) !important;
+    box-shadow: inset 3px 2px 5px 0 rgb(0 0 0 / 84%),
+        rgb(222 241 184 / 0%) 7px 3px 10px, rgb(0 0 0 / 16%) 3px 3px 3px 0px,
+        #7fb41400 4px 4px 0;
+    color: var(--theme__color) !important;
+}
 
 .to-high {
     box-shadow: 4px 6px 0px 0px #7fb414, 0px 0px 0px 0px #000000;
@@ -9,3 +17,7 @@
 .to-low {
     box-shadow: inset 4px 4px 4px 0px #000000, inset 0px 0px 0px 0px #000000;
 }
+
+/*
+    ! =========== ! END ===========
+*/

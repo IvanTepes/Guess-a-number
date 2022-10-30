@@ -1,4 +1,6 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/*
+    ! =========== ! Normalize.css v8.0.1  ===========
+*/
 /* Document
    ========================================================================== */
 /**
@@ -153,7 +155,8 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -162,7 +165,8 @@ input { /* 1 */
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -308,19 +312,23 @@ template {
   display: none;
 }
 
-/**
- * Set up a decent box model on the root element
- */
+/*
+    ! =========== ! Normalize END  ===========
+*/
+/*
+    ! =========== ! Basic Styles ===========
+*/
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
-input {
-  border-width: 0;
-  border-style: none;
-  border-color: transparent;
-  -o-border-image: none;
-     border-image: none;
+body {
+  height: inherit;
+}
+
+.wrapper {
+  height: inherit;
 }
 
 /**
@@ -335,9 +343,6 @@ input {
   box-sizing: inherit;
 }
 
-/**
- * Basic styles for links
- */
 a {
   color: var(--theme__color--text);
   text-decoration: none;
@@ -351,29 +356,12 @@ h3 {
   margin-bottom: 0 !important;
 }
 
-p {
-  font-size: 0.8rem;
-}
-
-/* .material-symbols-outlined {
-    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
-} */
-.fa {
-  color: var(--theme__color--input);
-  margin-top: 0;
-  height: 6rem;
-  border-radius: 50px 0 0 50px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.btn:hover {
-  background-color: var(--theme__color--input) !important;
-  box-shadow: inset 3px 2px 5px 0 rgba(0, 0, 0, 0.84), rgba(222, 241, 184, 0) 7px 3px 10px, rgba(0, 0, 0, 0.16) 3px 3px 3px 0px, rgba(127, 180, 20, 0) 4px 4px 0;
-  color: var(--theme__color) !important;
-}
-
+/*
+    ! =========== ! END ===========
+*/
+/*
+    ! =========== ! Base theme elements ===========
+*/
 .secret-number__col {
   background-color: var(--theme__color);
   border: 1px solid var(--theme__color--border);
@@ -411,63 +399,27 @@ p {
   text-shadow: 0px 1px black;
 }
 
+/*
+    ! =========== ! END ===========
+*/
+/*
+    ! =========== ! Fonts ===========
+*/
 body {
   color: var(--theme__color--text);
   font: normal 125%/1 "Audiowide", cursive !important;
 }
 
-/**
- * Clear inner floats
- */
-.clearfix::after {
-  clear: both;
-  content: "";
-  display: table;
+p {
+  font-size: 0.8rem;
 }
 
-/**
- * Main content containers
- * 1. Make the container full-width with a maximum width
- * 2. Center it in the viewport
- * 3. Leave some space on the edges, especially valuable on small screens
- */
-.container {
-  max-width: 1180px; /* 1 */
-  margin-left: auto; /* 2 */
-  margin-right: auto; /* 2 */
-  padding-left: 20px; /* 3 */
-  padding-right: 20px; /* 3 */
-  width: 100%; /* 1 */
-}
-
-/**
- * Hide text while making it readable for screen readers
- * 1. Needed in WebKit-based browsers because of an implementation bug;
- *    See: https://code.google.com/p/chromium/issues/detail?id=457146
- */
-.hide-text {
-  overflow: hidden;
-  padding: 0; /* 1 */
-  text-indent: 101%;
-  white-space: nowrap;
-}
-
-/**
- * Hide element while making it readable for screen readers
- * Shamelessly borrowed from HTML5Boilerplate:
- * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
- */
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
+/*
+    ! =========== ! END ===========
+*/
+/*
+    ! =========== ! CSS helper classes ===========
+*/
 .active {
   box-shadow: inset 3px 3px 3px 0 #000000, rgba(0, 0, 0, 0.16) 3px 3px 3px 0px, rgba(127, 180, 20, 0) 3px 3px 0 !important;
 }
@@ -481,8 +433,11 @@ body {
   left: 25%;
 }
 
-/* 
-    Guess right section of screen
+/*
+    ! =========== ! END ===========
+*/
+/*
+    ! =========== ! Input number ===========
 */
 .check__input {
   display: flex;
@@ -491,16 +446,43 @@ body {
   align-items: center;
 }
 .check__input--number {
-  width: 50%;
-  height: 50px;
+  width: 100%;
+  height: 42px;
   text-align: center;
+  padding-left: 5px;
+}
+.check__input--number::-moz-placeholder {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--theme-color);
+}
+.check__input--number:-ms-input-placeholder {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--theme-color);
+}
+.check__input--number::placeholder {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--theme-color);
+}
+.check__input--number:focus::-moz-placeholder {
+  color: transparent;
+}
+.check__input--number:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.check__input--number:focus::placeholder {
+  color: transparent;
 }
 
-/* 
-    ! Main Display Layout
+/*
+    ! =========== ! END ===========
+*/
+/*
+    ! =========== ! Wrapper ===========
 */
 .wrapper {
-  height: 100vh;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -509,16 +491,14 @@ body {
   color: var(--theme__color--text);
 }
 
-/* 
-    ! Secret number 
+/*
+    ! =========== ! END ===========
+*/
+/*
+    ! =========== ! Secret number ===========
 */
 .secret-number {
-  font-size: 8rem;
-}
-@media (max-width: 320px) {
-  .secret-number {
-    font-size: 5rem;
-  }
+  font-size: 5rem;
 }
 .secret-number__row {
   justify-content: center;
@@ -541,6 +521,18 @@ body {
   box-shadow: inset 2px 2px 3px 0px var(--theme__color), inset -1px -1px 3px 0px var(--theme__color);
 }
 
+/*
+    ! =========== ! END ===========
+*/
+/*
+    ! =========== ! Button ===========
+*/
+.btn:hover {
+  background-color: var(--theme__color--input) !important;
+  box-shadow: inset 3px 2px 5px 0 rgba(0, 0, 0, 0.84), rgba(222, 241, 184, 0) 7px 3px 10px, rgba(0, 0, 0, 0.16) 3px 3px 3px 0px, rgba(127, 180, 20, 0) 4px 4px 0;
+  color: var(--theme__color) !important;
+}
+
 .to-high {
   box-shadow: 4px 6px 0px 0px #7fb414, 0px 0px 0px 0px #000000;
 }
@@ -549,6 +541,12 @@ body {
   box-shadow: inset 4px 4px 4px 0px #000000, inset 0px 0px 0px 0px #000000;
 }
 
+/*
+    ! =========== ! END ===========
+*/
+/*
+    ! =========== ! Side Menu ===========
+*/
 .side__menu {
   height: 100%;
   width: 0;
@@ -572,9 +570,6 @@ body {
   position: absolute;
   top: 40%;
 }
-.side__menu--open:focus {
-  background-color: red;
-}
 .side__menu--close {
   position: absolute;
   top: 0;
@@ -582,20 +577,22 @@ body {
   font-size: 36px !important;
   margin-left: 50px;
 }
-.side__menu a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: var(--theme__color--text);
-  text-shadow: 3px 3px 4px black;
-  display: block;
-  transition: 0.2s;
-}
-.side__menu a:hover {
+.side__menu--btn {
   color: var(--theme__color--input);
-  text-shadow: 3px 3px 4px black;
+  margin-top: 0;
+  height: 6rem;
+  border-radius: 50px 0 0 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
+/*
+    ! =========== ! END ===========
+*/
+/*
+    ! ==========  Themes Menu ==========
+ */
 .themes-menu {
   height: calc(100% - 60px);
   display: flex;
@@ -709,6 +706,12 @@ body {
   color: #001534 !important;
 }
 
+/*
+    ! =========== ! END ===========
+*/
+/*
+    ! =========== ! Theme colours ===========
+*/
 html[data-theme=light] {
   --theme__color: #d9d9d9;
   --theme__color--text: #222222;
@@ -750,4 +753,58 @@ html[data-theme=blue] {
   --theme__color--text: #b7c9e4;
   --theme__color--border: #b7c9e4;
   --theme__color--input: #ff5470;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*
+    ! =========== ! END ===========
+*/
+/*
+    ! =========== ! Media queries ===========
+*/
+/* Input number */
+@media (max-width: 319px) {
+  .check__input--number {
+    width: 100%;
+  }
+}
+@media (min-width: 320px) {
+  .check__input--number {
+    width: 95%;
+  }
+}
+@media (min-width: 375px) {
+  .check__input--number {
+    width: 90%;
+    padding-left: 4px;
+  }
+}
+@media (min-width: 425px) {
+  .check__input--number {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .check__input--number {
+    width: 45%;
+  }
+}
+@media (min-width: 1024px) {
+  .check__input--number {
+    width: 35%;
+  }
+}
+@media (min-width: 1440px) {
+  .check__input--number {
+    width: 25%;
+  }
+}
+@media (min-width: 1600px) {
+  .check__input--number {
+    width: 25%;
+    padding-left: 20px;
+  }
+}
+
+/*
+    ! =========== ! END ===========
+*//*# sourceMappingURL=main.css.map */

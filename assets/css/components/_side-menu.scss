@@ -1,6 +1,6 @@
-// ===================================================================
-// ! ====================== ! Side Menu ==============================
-// ===================================================================
+/*
+    ! =========== ! Side Menu ===========
+*/
 
 .side__menu {
     height: 100%;
@@ -25,9 +25,6 @@
         right: 0px;
         position: absolute;
         top: 40%;
-        &:focus {
-            background-color: red;
-        }
     }
 
     &--close {
@@ -38,18 +35,17 @@
         margin-left: 50px;
     }
 
-    & a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: var(--theme__color--text);
-        text-shadow: 3px 3px 4px black;
-        display: block;
-        transition: 0.2s;
-    }
-
-    & a:hover {
+    &--btn {
         color: var(--theme__color--input);
-        text-shadow: 3px 3px 4px black;
+        margin-top: 0;
+        height: 6rem;
+        border-radius: 50px 0 0 50px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 }
+
+/*
+    ! =========== ! END ===========
+*/

@@ -62,7 +62,7 @@ const message = {
     },
     info: {
         startInfo: 'Start Guessing..',
-        noGuess: 'Please Select a Number!',
+        noGuess: 'Please Enter a Number!',
         correct: 'is Correct!',
         high: 'is Too High!',
         low: 'is Too Low!',
@@ -220,6 +220,7 @@ function openMenu() {
 function closeMenu() {
     document.getElementById('js-sideMenu').style.width = '0';
 }
+// ! End
 
 // ! Event listener to play again
 document
