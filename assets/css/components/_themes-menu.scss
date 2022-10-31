@@ -30,6 +30,7 @@
             color: var(--theme__color--input) !important;
         }
 
+        /* Changing the background color and text color of the close button when you hover over it. */
         &--close-btn:hover {
             background-color: var(--theme__color) !important;
             color: var(--theme__color--input) !important;
