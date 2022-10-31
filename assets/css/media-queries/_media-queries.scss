@@ -2,7 +2,6 @@
     ! =========== ! Media queries ===========
 */
 
-
 /* A media query for the input field. */
 .check__input--number {
     @include breakpoint-device(mobile-small, max) {
@@ -35,7 +34,7 @@
     }
 }
 
-/* A secret number column media query. */
+/* A media query for secret number column. */
 .secret-number__col {
     @include breakpoint-device(mobile-small, max) {
         font-size: 5rem;
@@ -55,6 +54,22 @@
     }
     @include breakpoint-device(laptop, min) {
         width: 20% !important;
+    }
+}
+
+/* A media query for the themes menu row. */
+.themes-menu__row {
+    @include breakpoint-device(tablets, min) {
+        width: 65%;
+    }
+    @include breakpoint-device(laptop, min) {
+        width: 55%;
+    }
+    @include breakpoint-device(desktop-lg, min) {
+        width: 40%;
+    }
+    @include breakpoint-device(desktop-xl, min) {
+        width: 35%;
     }
 }
 

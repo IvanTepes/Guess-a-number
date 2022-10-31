@@ -647,6 +647,7 @@ p {
 }
 .themes-menu__right-side {
   width: 3.4rem;
+  /* Changing the background color and text color of the close button when you hover over it. */
 }
 .themes-menu__right-side--close-btn {
   right: 0px;
@@ -857,7 +858,7 @@ html[data-theme=blue] {
   }
 }
 
-/* A secret number column media query. */
+/* A media query for secret number column. */
 @media (max-width: 319px) {
   .secret-number__col {
     font-size: 5rem;
@@ -887,6 +888,28 @@ html[data-theme=blue] {
 @media (min-width: 1024px) {
   .secret-number__col {
     width: 20% !important;
+  }
+}
+
+/* A media query for the themes menu row. */
+@media (min-width: 768px) {
+  .themes-menu__row {
+    width: 65%;
+  }
+}
+@media (min-width: 1024px) {
+  .themes-menu__row {
+    width: 55%;
+  }
+}
+@media (min-width: 1440px) {
+  .themes-menu__row {
+    width: 40%;
+  }
+}
+@media (min-width: 1600px) {
+  .themes-menu__row {
+    width: 35%;
   }
 }
 
