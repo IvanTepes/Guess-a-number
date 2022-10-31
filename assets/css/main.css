@@ -511,11 +511,11 @@ p {
 }
 
 .number__to-high {
-  box-shadow: inset 2px 2px 3px 0px #ffffff, 2px 4px 3px 0px #222222;
+  box-shadow: 2px 2px 4px 0px #0d0d0d;
 }
 
 .number__to-low {
-  box-shadow: inset 2px 2px 3px 0px #222222, inset -1px -1px 3px 0px #222222;
+  box-shadow: inset 2px 2px 4px 0px #0d0d0d;
 }
 
 .number__correct {
@@ -532,7 +532,7 @@ p {
 */
 .btn:hover {
   background-color: var(--theme__color--input) !important;
-  box-shadow: inset 3px 2px 5px 0 rgba(0, 0, 0, 0.84), rgba(222, 241, 184, 0) 7px 3px 10px, rgba(0, 0, 0, 0.16) 3px 3px 3px 0px, rgba(127, 180, 20, 0) 4px 4px 0;
+  box-shadow: inset 2px 1px 5px 0 #0d0d0d;
   color: var(--theme__color) !important;
 }
 
@@ -620,6 +620,10 @@ p {
   margin-top: 0;
   height: 6rem;
   border-radius: 50px 0 0 50px !important;
+  background-color: var(--theme__color) !important;
+  color: var(--theme__color--input) !important;
+}
+.themes-menu__right-side--close-btn:hover {
   background-color: var(--theme__color) !important;
   color: var(--theme__color--input) !important;
 }
@@ -734,7 +738,7 @@ html[data-theme=dark] {
 html[data-theme=brown] {
   --theme__color: #55423d;
   --theme__color--text: #fffffe;
-  --theme__color--border: #271c19;
+  --theme__color--border: #fffffe;
   --theme__color--input: #ffc0ad;
 }
 
@@ -748,7 +752,7 @@ html[data-theme=green] {
 html[data-theme=purple] {
   --theme__color: #6246ea;
   --theme__color--text: #fffffe;
-  --theme__color--border: #2b2c34;
+  --theme__color--border: #fffffe;
   --theme__color--input: #d1d1e9;
 }
 
