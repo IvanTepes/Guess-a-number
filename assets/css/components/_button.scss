@@ -4,9 +4,7 @@
 
 .btn:hover {
     background-color: var(--theme__color--input) !important;
-    box-shadow: inset 3px 2px 5px 0 rgb(0 0 0 / 84%),
-        rgb(222 241 184 / 0%) 7px 3px 10px, rgb(0 0 0 / 16%) 3px 3px 3px 0px,
-        #7fb41400 4px 4px 0;
+    box-shadow: inset 2px 1px 5px 0 #0d0d0d;
     color: var(--theme__color) !important;
 }
 
