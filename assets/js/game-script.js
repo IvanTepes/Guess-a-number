@@ -28,7 +28,7 @@ const hasClass = (element, className) => element.classList.contains(className);
 
 // ! Objects
 /* A object that holds all the elements that will be used in the game. */
-const htmlElement = {
+const selectElement = {
     header: getElement('.header__title'),
     instruction: getElement('.instruction__title'),
     number: getElement('.secret-number__col--number'),
@@ -85,11 +85,11 @@ const message = {
 
 // ! Initial message and score
 /* Setting the initial message and score. */
-htmlElement.header.textContent = message.header.startMessage;
-htmlElement.score.textContent = message.score.startScore;
-htmlElement.info.textContent = message.info.startInfo;
-htmlElement.instruction.textContent = message.instruction.startInstruction;
-htmlElement.highScore.textContent = message.highScore;
+selectElement.header.textContent = message.header.startMessage;
+selectElement.score.textContent = message.score.startScore;
+selectElement.info.textContent = message.info.startInfo;
+selectElement.instruction.textContent = message.instruction.startInstruction;
+selectElement.highScore.textContent = message.highScore;
 gameNumbers.score = gameNumbers.startScore;
 // ! End
 
@@ -105,7 +105,7 @@ document
         gameNumbers.guess = guess;
         // When no guess
         if (!gameNumbers.guess) {
-            htmlElement.info.textContent = message.info.noGuess;
+            selectElement.info.textContent = message.info.noGuess;
             // When player wins
         } else if (gameNumbers.guess === gameNumbers.secretNumber) {
             numberCorrect();
@@ -140,8 +140,8 @@ document
  * checkResult element.
  */
 function endGame() {
-    addClass(htmlElement.checkInput, 'hidden');
-    addClass(htmlElement.checkResult, 'center-absolute');
+    addClass(selectElement.checkInput, 'hidden');
+    addClass(selectElement.checkResult, 'center-absolute');
 }
 
 /**
@@ -149,9 +149,9 @@ function endGame() {
  * element and remove the class 'center-absolute' from the checkResult element.
  */
 function newGame() {
-    if (hasClass(htmlElement.checkInput, 'hidden')) {
-        removeClass(htmlElement.checkInput, 'hidden');
-        removeClass(htmlElement.checkResult, 'center-absolute');
+    if (hasClass(selectElement.checkInput, 'hidden')) {
+        removeClass(selectElement.checkInput, 'hidden');
+        removeClass(selectElement.checkResult, 'center-absolute');
     }
 }
 // ! End
@@ -159,78 +159,78 @@ function newGame() {
 // ! Functions to display message
 /* Setting the game layout to display a message that says "Congrats" and the number is correct. */
 function numberCorrect() {
-    htmlElement.header.textContent = message.header.congrats;
-    htmlElement.instruction.textContent = message.instruction.number;
-    htmlElement.number.textContent = `${gameNumbers.secretNumber}`;
+    selectElement.header.textContent = message.header.congrats;
+    selectElement.instruction.textContent = message.instruction.number;
+    selectElement.number.textContent = `${gameNumbers.secretNumber}`;
 
-    htmlElement.info.textContent = message.info.correct;
+    selectElement.info.textContent = message.info.correct;
 
-    addClass(htmlElement.numberEl, 'number__correct');
+    addClass(selectElement.numberEl, 'number__correct');
 
     if (
-        hasClass(htmlElement.numberEl, 'number__to-high') ||
-        hasClass(htmlElement.numberEl, 'number__to-low')
+        hasClass(selectElement.numberEl, 'number__to-high') ||
+        hasClass(selectElement.numberEl, 'number__to-low')
     ) {
-        removeClass(htmlElement.numberEl, 'number__to-high');
-        removeClass(htmlElement.numberEl, 'number__to-low');
+        removeClass(selectElement.numberEl, 'number__to-high');
+        removeClass(selectElement.numberEl, 'number__to-low');
     }
 
     /* Checking if the score is greater than the high score. If it is, then it sets the high score to
     the score. */
     if (gameNumbers.score > gameNumbers.highScore) {
         gameNumbers.highScore = gameNumbers.score;
-        htmlElement.highScore.textContent = `High Score : ${gameNumbers.highScore}`;
+        selectElement.highScore.textContent = `High Score : ${gameNumbers.highScore}`;
     }
 }
 
 /* Setting the game layout to display a message that says "Game Over" and the score. */
 function numberFail() {
-    htmlElement.header.textContent = '';
-    htmlElement.instruction.textContent = message.header.failMessage;
-    htmlElement.number.textContent = message.number.gameOver;
-    htmlElement.info.textContent = '';
-    htmlElement.score.textContent = `Score : ${gameNumbers.score}`;
+    selectElement.header.textContent = '';
+    selectElement.instruction.textContent = message.header.failMessage;
+    selectElement.number.textContent = message.number.gameOver;
+    selectElement.info.textContent = '';
+    selectElement.score.textContent = `Score : ${gameNumbers.score}`;
     /* Setting the score to 0. */
     gameNumbers.score = 0;
-    htmlElement.score.textContent = `Score : ${gameNumbers.score}`;
-    removeClass(htmlElement.secretNumberCol, 'secret-number__col');
-    removeClass(htmlElement.secretNumberCol, 'number__to-low');
-    removeClass(htmlElement.secretNumberCol, 'number__to-high');
+    selectElement.score.textContent = `Score : ${gameNumbers.score}`;
+    removeClass(selectElement.secretNumberCol, 'secret-number__col');
+    removeClass(selectElement.secretNumberCol, 'number__to-low');
+    removeClass(selectElement.secretNumberCol, 'number__to-high');
 }
 
 /* Setting the game layout to display a message that says "Sorry" and the number is too high. */
 function numberHigh() {
-    htmlElement.header.textContent = message.header.sorry;
-    htmlElement.instruction.textContent = message.instruction.number;
-    htmlElement.info.textContent = message.info.high;
-    htmlElement.number.textContent = `${gameNumbers.guess}`;
+    selectElement.header.textContent = message.header.sorry;
+    selectElement.instruction.textContent = message.instruction.number;
+    selectElement.info.textContent = message.info.high;
+    selectElement.number.textContent = `${gameNumbers.guess}`;
 
     /* Subtracting 1 from the score. */
     gameNumbers.score = gameNumbers.score - 1;
 
-    htmlElement.score.textContent = `Score : ${gameNumbers.score}`;
+    selectElement.score.textContent = `Score : ${gameNumbers.score}`;
 
-    addClass(htmlElement.numberEl, 'number__to-high');
-    if (hasClass(htmlElement.numberEl, 'number__to-low')) {
-        removeClass(htmlElement.numberEl, 'number__to-low');
+    addClass(selectElement.numberEl, 'number__to-high');
+    if (hasClass(selectElement.numberEl, 'number__to-low')) {
+        removeClass(selectElement.numberEl, 'number__to-low');
     }
 }
 
 /* Setting the game layout to display a message that says "Sorry" and the number is too low. */
 function numberLow() {
-    htmlElement.header.textContent = message.header.sorry;
-    htmlElement.instruction.textContent = message.instruction.number;
-    htmlElement.info.textContent = message.info.low;
-    htmlElement.number.textContent = `${gameNumbers.guess}`;
+    selectElement.header.textContent = message.header.sorry;
+    selectElement.instruction.textContent = message.instruction.number;
+    selectElement.info.textContent = message.info.low;
+    selectElement.number.textContent = `${gameNumbers.guess}`;
 
     /* Subtracting 1 from the score. */
     gameNumbers.score = gameNumbers.score - 1;
 
-    htmlElement.score.textContent = `Score : ${gameNumbers.score}`;
+    selectElement.score.textContent = `Score : ${gameNumbers.score}`;
 
-    addClass(htmlElement.numberEl, 'number__to-low');
-    if (hasClass(htmlElement.numberEl, 'number__to-high')) {
-        removeClass(htmlElement.numberEl, 'number__to-high');
+    addClass(selectElement.numberEl, 'number__to-low');
+    if (hasClass(selectElement.numberEl, 'number__to-high')) {
+        removeClass(selectElement.numberEl, 'number__to-high');
     }
 }
 
@@ -262,16 +262,16 @@ document
         gameNumbers.secretNumber = generateRandomNumber();
 
         /* Setting the initial message and score. */
-        htmlElement.header.textContent = message.header.startMessage;
-        htmlElement.instruction.textContent =
+        selectElement.header.textContent = message.header.startMessage;
+        selectElement.instruction.textContent =
             message.instruction.startInstruction;
-        htmlElement.number.textContent = `?`;
-        htmlElement.info.textContent = message.info.startInfo;
-        htmlElement.score.textContent = `Score : ${gameNumbers.score}`;
+        selectElement.number.textContent = `?`;
+        selectElement.info.textContent = message.info.startInfo;
+        selectElement.score.textContent = `Score : ${gameNumbers.score}`;
 
-        removeClass(htmlElement.numberEl, 'number__correct');
+        removeClass(selectElement.numberEl, 'number__correct');
 
-        addClass(htmlElement.secretNumberCol, 'secret-number__col');
+        addClass(selectElement.secretNumberCol, 'secret-number__col');
 
         getElement('.check__input--number').value = '';
 
