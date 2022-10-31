@@ -1,3 +1,14 @@
+/* Setting the default font for the entire project. */
+/* Defining the border radius for the entire project. */
+/* Defining the colors for the different themes. */
+/* Setting the background color and text color of the theme. */
+/* A mixin that is used to center an element. */
+/* A mixin that is used to set the theme of the game. */
+/* A mixin that is used to set the background color, border radius, and text color of the card. */
+/* A mixin that is used to set the drop shadow of the card. */
+/* A mixin that is used to set the background color, border radius, and text color of the card. */
+/* A map of breakpoints. */
+/* A mixin that is used to set the device breakpoints.*/
 /*
     ! =========== ! Normalize.css v8.0.1  ===========
 */
@@ -318,6 +329,11 @@ template {
 /*
     ! =========== ! Basic Styles ===========
 */
+/* Set up a decent box model on the root element
+Set height of html and body and wrapper to 100 %
+to fill the visible viewport on mobile screens
+to avoid overlapping with chrome address bar
+*/
 html {
   box-sizing: border-box;
   height: 100%;
@@ -405,11 +421,13 @@ h3 {
 /*
     ! =========== ! Fonts ===========
 */
+/* Setting the font color and font size of the body. */
 body {
   color: var(--theme__color--text);
   font: normal 125%/1 "Audiowide", cursive !important;
 }
 
+/* Setting the font size of the paragraph. */
 p {
   font-size: 0.8rem;
 }
@@ -420,14 +438,17 @@ p {
 /*
     ! =========== ! CSS helper classes ===========
 */
+/* Adding a box shadow to the active theme element. */
 .active {
   box-shadow: inset 3px 3px 3px 0 #000000, rgba(0, 0, 0, 0.16) 3px 3px 3px 0px, rgba(127, 180, 20, 0) 3px 3px 0 !important;
 }
 
+/* Hiding the element. */
 .hidden {
   visibility: hidden;
 }
 
+/* Centering the absolute position element. */
 .center-absolute {
   position: absolute;
   left: 25%;
@@ -530,6 +551,7 @@ p {
 /*
     ! =========== ! Button ===========
 */
+/* Changing the color of the button when you hover over it. */
 .btn:hover {
   background-color: var(--theme__color--input) !important;
   box-shadow: inset 2px 1px 5px 0 #0d0d0d;
@@ -550,6 +572,7 @@ p {
 /*
     ! =========== ! Side Menu ===========
 */
+/* The styling for the side menu. */
 .side__menu {
   height: 100%;
   width: 0;
@@ -563,6 +586,10 @@ p {
   transition: 0.2s;
   padding-top: 60px;
   text-align: center;
+  /* Styling the header of the side menu. */
+  /* Setting the position of the open button. */
+  /* Setting the position of the close button. */
+  /* Styling the buttons in the side menu. */
 }
 .side__menu--header {
   color: var(--theme__color);

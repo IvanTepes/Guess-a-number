@@ -1,13 +1,12 @@
 // ! =========== ! Variables ===========
 
-//  Main Font
-// $main-font: 'Stalinist One', cursive, 'Helvetica', 'Arial', sans-serif !default;
+/* Setting the default font for the entire project. */
 $main-font: 'Audiowide', cursive;
 
-// Border radius
+/* Defining the border radius for the entire project. */
 $border__radius: 15px;
 
-// Theme Colours
+/* Defining the colors for the different themes. */
 $theme__light: #d9d9d9;
 $theme__light--text: #222222;
 $theme__light--border: #3b3b3b;

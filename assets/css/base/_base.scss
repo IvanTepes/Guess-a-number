@@ -2,10 +2,11 @@
     ! =========== ! Basic Styles ===========
 */
 
-// Set up a decent box model on the root element
-// Set height of html and body and wrapper to 100 %
-// to fill the visible viewport on mobile screens
-// to avoid overlapping with chrome address bar
+/* Set up a decent box model on the root element
+Set height of html and body and wrapper to 100 %
+to fill the visible viewport on mobile screens
+to avoid overlapping with chrome address bar
+*/
 html {
     box-sizing: border-box;
     height: 100%;

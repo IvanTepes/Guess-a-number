@@ -2,12 +2,13 @@
     ! =========== ! Fonts ===========
 */
 
+/* Setting the font color and font size of the body. */
 body {
     color: var(--theme__color--text);
     font: normal 125% / 1 $main-font !important;
 }
 
-// Font size of paragraph
+/* Setting the font size of the paragraph. */
 p {
     font-size: 0.8rem;
 }

@@ -36,20 +36,20 @@
 
 // ! =========== ! Main Mixins ===========
 
-// Main text style
+/* Setting the background color and text color of the theme. */
 @mixin text-style {
     background-color: var(--theme__color);
     color: var(--theme__color--text);
 }
 
-// Align and justify element to center
+/* A mixin that is used to center an element. */
 @mixin position__to--center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-// Theme mixin
+/* A mixin that is used to set the theme of the game. */
 @mixin themes {
     .secret-number__col {
         background-color: var(--theme__color);
@@ -89,21 +89,21 @@
     }
 }
 
-// Card color
+/* A mixin that is used to set the background color, border radius, and text color of the card. */
 @mixin card-style($theme-color, $text-color) {
     background-color: $theme-color;
     border-radius: $border__radius;
     color: $text-color;
 }
 
-// Drop Shadow
+/* A mixin that is used to set the drop shadow of the card. */
 @mixin drop-shadow($color) {
     box-shadow: inset 3px 2px 5px 0 rgba(255, 255, 255, 0.36),
         rgba(222, 241, 184, 0) 7px 3px 10px, rgba(0, 0, 0, 0.7) 3px 3px 3px 0px,
         $color 4px 4px 0;
 }
 
-//
+/* A mixin that is used to set the background color, border radius, and text color of the card. */
 @mixin hover($bg-color, $text-color) {
     background-color: $bg-color !important;
     box-shadow: inset 3px 2px 5px 0 #000000, rgb(222 241 184 / 0%) 7px 3px 10px,
@@ -111,7 +111,7 @@
     color: $text-color !important;
 }
 
-// A map of breakpoints.
+/* A map of breakpoints. */
 $breakpoints: (
     mobile-small: 320px,
     mobile-medium: 375px,
@@ -122,6 +122,7 @@ $breakpoints: (
     desktop-xl: 1600px,
 );
 
+/* A mixin that is used to set the device breakpoints.*/
 @mixin breakpoint-device($breakpoint, $direction) {
     @if map-has-key($breakpoints, $breakpoint) {
         // Get the breakpoint value.
