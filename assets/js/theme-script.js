@@ -21,7 +21,9 @@
 
 */
 
-// Select and store themes elements in to object
+/* Creating an object with the keys of light, dark, brown, green, purple, and blue. The values are the
+elements that have the classes of themes__item--light, themes__item--dark, themes__item--brown,
+themes__item--green, themes__item--purple, and themes__item--blue. */
 const themeElements = {
     light: document.querySelector('.themes__item--light'),
     dark: document.querySelector('.themes__item--dark'),
@@ -31,20 +33,23 @@ const themeElements = {
     blue: document.querySelector('.themes__item--blue'),
 };
 
-// Create theme object with initial keys and values
+/* Creating an object with the keys of themesKeys and themesValues. The values are the keys and values
+of the themeElements object. */
 const themesObj = {
     themesKeys: Object.keys(themeElements),
     themesValues: Object.values(themeElements),
 };
 
-// Check user preferred theme
-// Check if preferred theme is dark
-// If dark add data theme dark attribute to HTML element
-// Create new key and value in theme object / activeTheme dark/light
-// Create variable with value of html theme element
-// Add class active to element
-// Add new property in themes object
-//      with keys and values preferred theme
+/* This is checking if the user has a preferred theme of dark or light.
+If the user has a preferred theme of dark, then the data-theme attribute of the HTML element is set to dark.
+The darkThemeElement variable is set to the themeElements.dark object.
+The active class is added to the darkThemeElement variable.
+The activeTheme property of the themesObj object is set to dark.
+If the user has a preferred theme of light, then the data-theme attribute of the HTML element is set to light.
+The lightThemeElement variable is set to the themeElements.light object.
+The active class is added to the lightThemeElement variable.
+The activeTheme property of the themesObj object is set to
+light. */
 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.documentElement.setAttribute('data-theme', 'dark');
     let darkThemeElement = themeElements.dark;
@@ -57,12 +62,20 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     themesObj.activeTheme = 'light';
 }
 
-// Function to read HTML data theme attribute
+/**
+ * It checks the value of the data-theme attribute on the documentElement and returns it.
+ */
 const checkActiveTheme = () =>
     document.documentElement.getAttribute('data-theme');
 
-// Add element event click listener
-// for each theme element
+/* Adding an event listener to each element in the themesObj.themesValues array.
+The event listener is listening for a click event. When the click event is triggered, the function is invoked. The
+function checks if the element has the class of
+themes__item--light, themes__item--dark,
+themes__item--brown, themes__item--green,
+themes__item--purple, or themes__item--blue.
+If the element has one of those classes, then the data-theme attribute of the documentElement is set to the
+name of the class. The changeTheme function is invoked. */
 themesObj.themesValues.forEach(function (element) {
     element.addEventListener('click', function () {
         if (element.classList.contains('themes__item--light')) {
@@ -82,8 +95,11 @@ themesObj.themesValues.forEach(function (element) {
     });
 });
 
-// Change Theme function
-// Invoke on every click on themes elements
+/**
+ * If the active theme is not the same as the old theme, remove the active class from the old theme and
+ * add the active class to the active theme.
+ * @returns The activeElement is being returned.
+ */
 function changeTheme() {
     let oldTheme = themesObj.activeTheme;
     let oldElement = themeElements[oldTheme];
@@ -98,5 +114,3 @@ function changeTheme() {
     }
     return activeElement;
 }
-
-
