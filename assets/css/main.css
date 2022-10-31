@@ -383,7 +383,7 @@ h3 {
   box-shadow: inset 0px 0px 5px 0px black, inset 0px 0px 0px 0px black;
   color: var(--theme__color);
   box-shadow: inset 2px 2px 3px 0px var(--theme__color), inset -1px -1px 3px 0px var(--theme__color);
-  border: 1px solid #222222;
+  border: 1px solid var(--theme__color--input);
 }
 
 .input {
@@ -567,6 +567,7 @@ p {
 .side__menu--header {
   color: var(--theme__color);
   text-shadow: 0px 0px 1px black;
+  padding-right: 27px;
 }
 .side__menu--open {
   right: 0px;
@@ -764,7 +765,6 @@ html[data-theme=blue] {
 /*
     ! =========== ! Media queries ===========
 */
-/* Input number */
 @media (max-width: 319px) {
   .check__input--number {
     width: 100%;
@@ -807,6 +807,38 @@ html[data-theme=blue] {
   .check__input--number {
     width: 25%;
     padding-left: 15px;
+  }
+}
+
+@media (max-width: 319px) {
+  .secret-number__col {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 320px) {
+  .secret-number__col {
+    font-size: 6rem;
+  }
+}
+@media (min-width: 375px) {
+  .secret-number__col {
+    width: 40% !important;
+  }
+}
+@media (min-width: 425px) {
+  .secret-number__col {
+    width: 35% !important;
+  }
+}
+@media (min-width: 768px) {
+  .secret-number__col {
+    font-size: 5rem;
+    width: 25% !important;
+  }
+}
+@media (min-width: 1024px) {
+  .secret-number__col {
+    width: 20% !important;
   }
 }
 

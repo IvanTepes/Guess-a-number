@@ -2,7 +2,7 @@
     ! =========== ! Media queries ===========
 */
 
-/* Input number */
+// Input number
 .check__input--number {
     @include breakpoint-device(mobile-small, max) {
         width: 100%;
@@ -31,6 +31,29 @@
     @include breakpoint-device(desktop-xl, min) {
         width: 25%;
         padding-left: 15px;
+    }
+}
+
+// Secret number column
+.secret-number__col {
+    @include breakpoint-device(mobile-small, max) {
+        font-size: 5rem;
+    }
+    @include breakpoint-device(mobile-small, min) {
+        font-size: 6rem;
+    }
+    @include breakpoint-device(mobile-medium, min) {
+        width: 40% !important;
+    }
+    @include breakpoint-device(mobile-large, min) {
+        width: 35% !important;
+    }
+    @include breakpoint-device(tablets, min) {
+        font-size: 5rem;
+        width: 25% !important;
+    }
+    @include breakpoint-device(laptop, min) {
+        width: 20% !important;
     }
 }
 
