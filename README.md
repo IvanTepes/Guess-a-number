@@ -13,7 +13,7 @@ You can access the game [here.](https://ivantepes.github.io/Guess-a-number/)
 
 | Color           | Hex                                                              |
 | --------------- | ---------------------------------------------------------------- |
-| theme\_\_light  | ![#d9d9d9](https://via.placeholder.com/10/d9d9d9?text=+) #d9d9d9 |
+| theme\_\_light  | ![#d9d9d9](https://placehold.co/15x15/d9d9d9/d9d9d9.png) #d9d9d9 |
 | theme\_\_dark   | ![#303030](https://via.placeholder.com/10/303030?text=+) #303030 |
 | theme\_\_brown  | ![#55423d](https://via.placeholder.com/10/55423d?text=+) #55423d |
 | theme\_\_green  | ![#004643](https://via.placeholder.com/10/004643?text=+) #004643 |
