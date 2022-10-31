@@ -461,16 +461,21 @@ p {
     ! =========== ! Input number ===========
 */
 .check__input {
+  /* Centering the input field. */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  /* Styling the input field. */
 }
 .check__input--number {
   width: 100%;
   height: 42px;
   text-align: center;
   padding-left: 5px;
+  /* Styling the placeholder text. */
+  /* Making the placeholder text transparent when the input is focused. */
+  /* Removing the outline when the input is focused. */
 }
 .check__input--number::-moz-placeholder {
   font-size: 0.9rem;
@@ -506,11 +511,13 @@ p {
 /*
     ! =========== ! Wrapper ===========
 */
+/* Centering the text, wrapping the text, and aligning the content. */
 .wrapper {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
+  /* A mixin that is defined in the `_mixins.scss` file. */
   background-color: var(--theme__color);
   color: var(--theme__color--text);
 }
@@ -521,8 +528,11 @@ p {
 /*
     ! =========== ! Secret number ===========
 */
+/* Setting the font size of the secret number to 6rem. */
 .secret-number {
   font-size: 6rem;
+  /* Centering the content of the row. */
+  /* Setting the width of the column to 45% of the parent element. */
 }
 .secret-number__row {
   justify-content: center;
@@ -531,14 +541,17 @@ p {
   width: 45% !important;
 }
 
+/* Adding a box shadow to the number if it is too high. */
 .number__to-high {
   box-shadow: 2px 2px 4px 0px #0d0d0d;
 }
 
+/* Adding a box shadow to the number if it is too low. */
 .number__to-low {
   box-shadow: inset 2px 2px 4px 0px #0d0d0d;
 }
 
+/* Adding a background color, color, and box shadow to the number if it is correct. */
 .number__correct {
   background-color: var(--theme__color--input);
   color: var(--theme__color);
@@ -624,6 +637,7 @@ p {
 /*
     ! ==========  Themes Menu ==========
  */
+/*  Side menu themes menu container */
 .themes-menu {
   height: calc(100% - 60px);
   display: flex;
@@ -747,6 +761,7 @@ p {
 /*
     ! =========== ! Theme colours ===========
 */
+/* Setting the theme colours for the different themes. */
 html[data-theme=light] {
   --theme__color: #d9d9d9;
   --theme__color--text: #222222;
@@ -796,6 +811,7 @@ html[data-theme=blue] {
 /*
     ! =========== ! Media queries ===========
 */
+/* A media query for the input field. */
 @media (max-width: 319px) {
   .check__input--number {
     width: 100%;
@@ -841,6 +857,7 @@ html[data-theme=blue] {
   }
 }
 
+/* A secret number column media query. */
 @media (max-width: 319px) {
   .secret-number__col {
     font-size: 5rem;

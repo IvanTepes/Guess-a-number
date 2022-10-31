@@ -2,12 +2,13 @@
     ! =========== ! Wrapper ===========
 */
 
+/* Centering the text, wrapping the text, and aligning the content. */
 .wrapper {
-    // height: 100vh;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
+    /* A mixin that is defined in the `_mixins.scss` file. */
     @include text-style;
 }
 

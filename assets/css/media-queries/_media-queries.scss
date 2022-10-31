@@ -2,7 +2,8 @@
     ! =========== ! Media queries ===========
 */
 
-// Input number
+
+/* A media query for the input field. */
 .check__input--number {
     @include breakpoint-device(mobile-small, max) {
         width: 100%;
@@ -34,7 +35,7 @@
     }
 }
 
-// Secret number column
+/* A secret number column media query. */
 .secret-number__col {
     @include breakpoint-device(mobile-small, max) {
         font-size: 5rem;

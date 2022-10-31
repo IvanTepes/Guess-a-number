@@ -2,6 +2,7 @@
     ! =========== ! Theme colours ===========
 */
 
+/* Setting the theme colours for the different themes. */
 html[data-theme='light'] {
     --theme__color: #{$theme__light};
     --theme__color--text: #{$theme__light--text};
