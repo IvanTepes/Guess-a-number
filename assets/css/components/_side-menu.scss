@@ -2,7 +2,7 @@
     ! =========== ! Side Menu ===========
 */
 
-/* The styling for the side menu. */
+// The styling for the side menu. 
 .side__menu {
     height: 100%;
     width: 0;
@@ -17,21 +17,21 @@
     padding-top: 60px;
     text-align: center;
 
-    /* Styling the header of the side menu. */
+    // Styling the header of the side menu.
     &--header {
         color: var(--theme__color);
         text-shadow: 0px 0px 1px black;
         padding-right: 27px;
     }
 
-    /* Setting the position of the open button. */
+    // Setting the position of the open button.
     &--open {
         right: 0px;
         position: absolute;
         top: 40%;
     }
 
-    /* Setting the position of the close button. */
+    // Setting the position of the close button.
     &--close {
         position: absolute;
         top: 0;
@@ -40,7 +40,7 @@
         margin-left: 50px;
     }
 
-    /* Styling the buttons in the side menu. */
+    // Styling the buttons in the side menu.
     &--btn {
         color: var(--theme__color--input);
         margin-top: 0;

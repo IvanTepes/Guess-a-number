@@ -2,18 +2,18 @@
     ! =========== ! CSS helper classes ===========
 */
 
-/* Adding a box shadow to the active theme element. */
+// Adding a box shadow to the active theme element.
 .active {
     box-shadow: inset 3px 3px 3px 0 #000000, rgb(0 0 0 / 16%) 3px 3px 3px 0px,
         rgb(127 180 20 / 0%) 3px 3px 0 !important;
 }
 
-/* Hiding the element. */
+// Hiding the element.
 .hidden {
     visibility: hidden;
 }
 
-/* Centering the absolute position element. */
+// Centering the absolute position element.
 .center-absolute {
     position: absolute;
     left: 25%;

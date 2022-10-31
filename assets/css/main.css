@@ -421,13 +421,11 @@ h3 {
 /*
     ! =========== ! Fonts ===========
 */
-/* Setting the font color and font size of the body. */
 body {
   color: var(--theme__color--text);
   font: normal 125%/1 "Audiowide", cursive !important;
 }
 
-/* Setting the font size of the paragraph. */
 p {
   font-size: 0.8rem;
 }
@@ -438,17 +436,14 @@ p {
 /*
     ! =========== ! CSS helper classes ===========
 */
-/* Adding a box shadow to the active theme element. */
 .active {
   box-shadow: inset 3px 3px 3px 0 #000000, rgba(0, 0, 0, 0.16) 3px 3px 3px 0px, rgba(127, 180, 20, 0) 3px 3px 0 !important;
 }
 
-/* Hiding the element. */
 .hidden {
   visibility: hidden;
 }
 
-/* Centering the absolute position element. */
 .center-absolute {
   position: absolute;
   left: 25%;
@@ -461,21 +456,16 @@ p {
     ! =========== ! Input number ===========
 */
 .check__input {
-  /* Centering the input field. */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* Styling the input field. */
 }
 .check__input--number {
   width: 100%;
   height: 42px;
   text-align: center;
   padding-left: 5px;
-  /* Styling the placeholder text. */
-  /* Making the placeholder text transparent when the input is focused. */
-  /* Removing the outline when the input is focused. */
 }
 .check__input--number::-moz-placeholder {
   font-size: 0.9rem;
@@ -517,7 +507,6 @@ p {
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
-  /* A mixin that is defined in the `_mixins.scss` file. */
   background-color: var(--theme__color);
   color: var(--theme__color--text);
 }
@@ -528,11 +517,8 @@ p {
 /*
     ! =========== ! Secret number ===========
 */
-/* Setting the font size of the secret number to 6rem. */
 .secret-number {
   font-size: 6rem;
-  /* Centering the content of the row. */
-  /* Setting the width of the column to 45% of the parent element. */
 }
 .secret-number__row {
   justify-content: center;
@@ -541,17 +527,14 @@ p {
   width: 45% !important;
 }
 
-/* Adding a box shadow to the number if it is too high. */
 .number__to-high {
   box-shadow: 2px 2px 4px 0px #0d0d0d;
 }
 
-/* Adding a box shadow to the number if it is too low. */
 .number__to-low {
   box-shadow: inset 2px 2px 4px 0px #0d0d0d;
 }
 
-/* Adding a background color, color, and box shadow to the number if it is correct. */
 .number__correct {
   background-color: var(--theme__color--input);
   color: var(--theme__color);
@@ -564,7 +547,6 @@ p {
 /*
     ! =========== ! Button ===========
 */
-/* Changing the color of the button when you hover over it. */
 .btn:hover {
   background-color: var(--theme__color--input) !important;
   box-shadow: inset 2px 1px 5px 0 #0d0d0d;
@@ -585,7 +567,6 @@ p {
 /*
     ! =========== ! Side Menu ===========
 */
-/* The styling for the side menu. */
 .side__menu {
   height: 100%;
   width: 0;
@@ -599,10 +580,6 @@ p {
   transition: 0.2s;
   padding-top: 60px;
   text-align: center;
-  /* Styling the header of the side menu. */
-  /* Setting the position of the open button. */
-  /* Setting the position of the close button. */
-  /* Styling the buttons in the side menu. */
 }
 .side__menu--header {
   color: var(--theme__color);
@@ -637,7 +614,6 @@ p {
 /*
     ! ==========  Themes Menu ==========
  */
-/*  Side menu themes menu container */
 .themes-menu {
   height: calc(100% - 60px);
   display: flex;
@@ -647,7 +623,6 @@ p {
 }
 .themes-menu__right-side {
   width: 3.4rem;
-  /* Changing the background color and text color of the close button when you hover over it. */
 }
 .themes-menu__right-side--close-btn {
   right: 0px;
