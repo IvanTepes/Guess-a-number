@@ -571,7 +571,7 @@ p {
 .side__menu--open {
   right: 0px;
   position: absolute;
-  top: 36.5%;
+  top: 40%;
 }
 .side__menu--close {
   position: absolute;
