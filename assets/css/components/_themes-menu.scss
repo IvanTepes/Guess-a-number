@@ -29,6 +29,11 @@
             background-color: var(--theme__color) !important;
             color: var(--theme__color--input) !important;
         }
+
+        &--close-btn:hover {
+            background-color: var(--theme__color) !important;
+            color: var(--theme__color--input) !important;
+        }
     }
 }
 
