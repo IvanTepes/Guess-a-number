@@ -1,24 +1,33 @@
 ('use strict');
 
 // ! Helpers
-// Generate random number
+
+/**
+ * Generate a random number between 1 and 20.
+ */
 const generateRandomNumber = () => Math.trunc(Math.random() * 20) + 1;
 
-// Return dom element
+/**
+ * GetElement is a function that takes a className as an argument and returns the first element in the
+ * DOM that matches the className.
+ */
 const getElement = className => document.querySelector(className);
 
-// To add class to element
+/**
+ * "addClass" adds a class to an element, "removeClass" removes a class from an element, and "hasClass"
+ * checks if an element contains a class.
+ * @param element - The element you want to add/remove/check the class of.
+ * @param className - The class name to be added or removed.
+ */
 const addClass = (element, className) => element.classList.add(className);
 
-// To remove class from element
 const removeClass = (element, className) => element.classList.remove(className);
 
-// To check if element contain class
 const hasClass = (element, className) => element.classList.contains(className);
 // ! End
 
 // ! Objects
-// An Object with html elements
+/* A object that holds all the elements that will be used in the game. */
 const htmlElement = {
     header: getElement('.header__title'),
     instruction: getElement('.instruction__title'),
@@ -32,19 +41,18 @@ const htmlElement = {
     secretNumberCol: getElement('#js-secretNumberCol'),
 };
 
-// An Object with game numbers
-// Secret number, start score, score, guess
-// Score and Guess will be added dynamically
+/* Creating an object called gameNumbers. It has three properties: secretNumber, startScore, and
+highScore. The secretNumber property is set to the return value of the generateRandomNumber function.
+The startScore property is set to 20. The highScore property is set to 0.
+Score and Guess will be added dynamically.
+ */
 const gameNumbers = {
     secretNumber: generateRandomNumber(),
     startScore: 20,
     highScore: 0,
 };
 
-// An Object with all messages
-// An Object holds elements names
-// and all messages that will be displayed
-// in that particular element
+/* An object that holds all the messages that will be displayed in the game. */
 const message = {
     header: {
         congrats: 'Congrats!',
@@ -76,9 +84,7 @@ const message = {
 // ! End
 
 // ! Initial message and score
-// Render initial score, message and instruction
-// Added score to object gameNumbers
-// Set Score to start score
+/* Setting the initial message and score. */
 htmlElement.header.textContent = message.header.startMessage;
 htmlElement.score.textContent = message.score.startScore;
 htmlElement.info.textContent = message.info.startInfo;
@@ -88,6 +94,7 @@ gameNumbers.score = gameNumbers.startScore;
 // ! End
 
 // ! Event listener for check button
+/* An event listener for the check button. */
 document
     .querySelector('.check__input--number-btn')
     .addEventListener('click', function () {
@@ -128,11 +135,19 @@ document
 // ! Functions
 
 // ! Functions to set game layout
+/**
+ * It adds the class 'hidden' to the checkInput element and the class 'center-absolute' to the
+ * checkResult element.
+ */
 function endGame() {
     addClass(htmlElement.checkInput, 'hidden');
     addClass(htmlElement.checkResult, 'center-absolute');
 }
 
+/**
+ * If the checkInput element has the class 'hidden', then remove the class 'hidden' from the checkInput
+ * element and remove the class 'center-absolute' from the checkResult element.
+ */
 function newGame() {
     if (hasClass(htmlElement.checkInput, 'hidden')) {
         removeClass(htmlElement.checkInput, 'hidden');
@@ -142,6 +157,7 @@ function newGame() {
 // ! End
 
 // ! Functions to display message
+/* Setting the game layout to display a message that says "Congrats" and the number is correct. */
 function numberCorrect() {
     htmlElement.header.textContent = message.header.congrats;
     htmlElement.instruction.textContent = message.instruction.number;
@@ -159,18 +175,22 @@ function numberCorrect() {
         removeClass(htmlElement.numberEl, 'number__to-low');
     }
 
+    /* Checking if the score is greater than the high score. If it is, then it sets the high score to
+    the score. */
     if (gameNumbers.score > gameNumbers.highScore) {
         gameNumbers.highScore = gameNumbers.score;
         htmlElement.highScore.textContent = `High Score : ${gameNumbers.highScore}`;
     }
 }
 
+/* Setting the game layout to display a message that says "Game Over" and the score. */
 function numberFail() {
     htmlElement.header.textContent = '';
     htmlElement.instruction.textContent = message.header.failMessage;
     htmlElement.number.textContent = message.number.gameOver;
     htmlElement.info.textContent = '';
     htmlElement.score.textContent = `Score : ${gameNumbers.score}`;
+    /* Setting the score to 0. */
     gameNumbers.score = 0;
     htmlElement.score.textContent = `Score : ${gameNumbers.score}`;
     removeClass(htmlElement.secretNumberCol, 'secret-number__col');
@@ -178,12 +198,14 @@ function numberFail() {
     removeClass(htmlElement.secretNumberCol, 'number__to-high');
 }
 
+/* Setting the game layout to display a message that says "Sorry" and the number is too high. */
 function numberHigh() {
     htmlElement.header.textContent = message.header.sorry;
     htmlElement.instruction.textContent = message.instruction.number;
     htmlElement.info.textContent = message.info.high;
     htmlElement.number.textContent = `${gameNumbers.guess}`;
 
+    /* Subtracting 1 from the score. */
     gameNumbers.score = gameNumbers.score - 1;
 
     htmlElement.score.textContent = `Score : ${gameNumbers.score}`;
@@ -194,12 +216,14 @@ function numberHigh() {
     }
 }
 
+/* Setting the game layout to display a message that says "Sorry" and the number is too low. */
 function numberLow() {
     htmlElement.header.textContent = message.header.sorry;
     htmlElement.instruction.textContent = message.instruction.number;
     htmlElement.info.textContent = message.info.low;
     htmlElement.number.textContent = `${gameNumbers.guess}`;
 
+    /* Subtracting 1 from the score. */
     gameNumbers.score = gameNumbers.score - 1;
 
     htmlElement.score.textContent = `Score : ${gameNumbers.score}`;
@@ -211,25 +235,33 @@ function numberLow() {
 }
 
 // ! Functions to open/close side menu
-// Open the side menu
+/**
+ * When the user clicks the button with the id of 'js-openMenu', the function will open the side menu
+ * by changing the width of the side menu to 100%.
+ */
 function openMenu() {
     document.getElementById('js-sideMenu').style.width = '100%';
 }
 
-// Close the side menu
+/**
+ * When the user clicks the close button, the side menu's width is set to 0.
+ */
 function closeMenu() {
     document.getElementById('js-sideMenu').style.width = '0';
 }
 // ! End
 
-// ! Event listener to play again
+// ! An event listener for the play again button.
+/* An event listener for the play again button. When the user clicks the play again button, the game will reset. */
 document
     .querySelector('#js-againButton')
     .addEventListener('click', function () {
+        /* Resetting the game. */
         gameNumbers.score = 20;
         gameNumbers.guess = '';
         gameNumbers.secretNumber = generateRandomNumber();
 
+        /* Setting the initial message and score. */
         htmlElement.header.textContent = message.header.startMessage;
         htmlElement.instruction.textContent =
             message.instruction.startInstruction;
