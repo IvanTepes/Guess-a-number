@@ -7,7 +7,7 @@ I have included six themes in the game that are completely unnecessary, but they
 
 ## Demo
 
-You can access the game [here.](https://ivantepes.github.io/Guess-a-number/)
+You can access the game [here.](https://ivantepes.github.io/guess-a-number/)
 
 ## Theme Colours
 
